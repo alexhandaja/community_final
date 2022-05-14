@@ -1,1 +1,214 @@
-ofj
+
+@font-face {
+    font-family: Arial;
+    src: url("sooper.ttf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: HK Grotesk;
+    font-weight: bold;
+    src: url("ComingSoon.ttf")
+      format("opentype");
+  }
+  p {
+    font-family: HK Grotesk;
+    }
+    body {
+      overflow-y: scroll;
+  }
+
+
+
+button:focus {
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+input {
+    border-radius: 4px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.086);
+}
+
+input:focus {
+    outline: 1px !important;
+    border: 1px !important;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.086);
+}
+
+#btn {
+    border: 1px solid #000;
+    border-radius: 50px;
+    border: 0px solid #000;
+    background: rgb(255, 179, 72);
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 57%;
+    margin: 0 auto;
+    outline: none;
+    padding: 11px 0;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#btn:hover {
+    background: rgba(231, 0, 0, 0.671);
+    color: rgba(0, 0, 0, 0.749);
+    border: 0px solid #000;
+}
+
+#btn2 {
+    border: 1px solid #000;
+    border-radius: 50px;
+    border: 0px solid #000;
+    background: rgba(231, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+    font-weight: 600;
+    width: 15%;
+    height:10%;
+    margin: 0 auto;
+    outline: none;
+    padding: 11px 0;
+    right:50%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#btn2:hover {
+    background: rgb(255, 179, 72);
+    color: rgba(0, 0, 0, 0.749);
+    border: 0px solid #000;
+}
+
+#btn3 {
+
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    background: rgba(231, 0, 0, 0);
+    color: rgba(231, 0, 0, 0.671);
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+    font-weight: 600;
+    width: 25%;
+    height:10%;
+    margin: 0 auto;
+    outline: none;
+    padding: 11px 0;
+    right:50%;
+    text-align: center;
+    cursor: pointer;
+    left:5%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#btn3:hover {
+    background: rgb(255, 179, 72);
+    color: rgba(0, 0, 0, 0.749);
+    border: 0px solid #000;
+}
+
+#myButton {
+
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    background: rgba(231, 0, 0, 0);
+    color: rgba(231, 0, 0, 0.671);
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+    font-weight: 600;
+    width: 25%;
+    height:10%;
+    margin: 0 auto;
+    outline: none;
+    padding: 11px 0;
+
+    text-align: center;
+    cursor: pointer;
+    top:10%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#myButton:hover {
+    background: rgb(255, 179, 72);
+    color: rgba(0, 0, 0, 0.749);
+    border: 0px solid #000;
+}
+
+answer {
+    bottom: 100%;
+}
+
+h1 { 
+    font-weight: 100; 
+    font-family: arial;
+    font-size: 2.5em;
+    
+  }
+
+  h5 {
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff
+  }
+  #mainInfo {
+      width: 600px; 
+      margin: 0 auto; 
+      margin-top: 50px; 
+      color:rgb(0, 0, 0);
+      text-align: center; 
+      font-family: arial; 
+      font-weight: 200;
+  }
+
+ 
+
+  holder:hover{
+    background: rgba(255, 0, 0, 0.671);
+    color: rgba(255, 0, 0, 0.749);
+    border: 0px solid #000;
+  }
+
+  #choice-container{
+    font-family: HK Grotesk;
+  }
+
+
+  #info {
+      bottom:100%;
+  }
+
+  #context {
+    font-size: 0.9rem;
+    right:20%;
+    width:900px;
+    position:relative;
+
+
+  }
+
+  #question-container{
+    background: rgba(255, 0, 0, 0.671);
+    color:#000;
+  }
+
+  #h5Question{
+    background: rgba(255, 0, 0, 0.671);
+  }

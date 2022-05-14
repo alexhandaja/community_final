@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <title>SVG3DTagCloud - Example 1</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='tCloud.js'></script>
+    <script src="script.js"></script>
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+    <script>
+
+    	$( document ).ready( function() {
+
+            const entries = [ 
+        
+        { label: '' },
+        { label: '' },
+        { label: '' },
+        { label: '' },
+        { label: '' },
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+        { label: ''},
+       
+    ];
+    $("entries").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
+    //css for the tag cloud
+    const settings = {
+    
+        entries: entries,
+        width: 700,
+        height: 450,
+        radius: '100%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: '#FFB348',
+        opacityOver: 1.00,
+        opacityOut: 0.07,
+        opacitySpeed: 6,
+        fov: 100,
+        speed: 0.2,
+        fontFamily: 'Arial',
+        fontSize: '30',
+        fontColor: '#000',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        Align:'center',
+        
+
+    };
+
+  
+
+
+let responses = ["life","alone","fearful","imposter syndrome","proud","identity crisis","unrecognized","unseen","different","isolated","segregated","blessed","proud","enriched","terrifying","interesting","varied","","perspective"];
+
+userInput = localStorage.getItem("save");
+
+
+    for (let i = 0; i < entries.length - 1; i++) {
+        let element = entries[i].label = responses[i];
+    }
+     entries[entries.length - 1].label = userInput;
+
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $( '#holder' ).svg3DTagCloud( settings );
+
+} );
+
+
+        
+    </script>
+
+</head>
+
+<body style="background-color:rgb(255, 179, 72);">
+    <div id="mainInfo">
+        <button id="btn3" class="btn3" type="button"  onClick="location.href='index.html'">retake quiz</button>
+    </div>
+<center>
+    <div id="mainInfo">
+     
+        <p id="context"> The term Asian American is one that encompasses a wide spectrum of communities with different cultural backgrounds and experiences. Asian Americans range from East Asians, South Asians, Southeast Asians, and Pacific Islanders. Not many people are aware of the complexity behind the term. Despite it being such a big community, many of us still feel alienated or have a sense of imposter syndrome within our respective communities. 
+ 
+            This raises the question I’ve always asked myself, what does it mean to be Asian? What makes me proud to be Asian? I hope this portion of the tool helps bring a sense of comfort, community, and belonging to those that might feel lost and alone. 
+             </p>
+</div>
+</center>
+<center>
+    <div id='holder'"></div>
+</center>
+</div>
+</body>
+
