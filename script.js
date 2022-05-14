@@ -105,7 +105,7 @@ function displayQuestion() {
         choiceContainer.innerHTML = '';
         document.body.style.background = 'transparent';
         let h5Question = document.createElement('h5');
-        h5Question.className = 'list-group-item list-group-item-action list-group-item-danger .disabled';
+        // h5Question.className = 'list-group-item list-group-item-action list-group-item-danger.disabled';
         h5Question.innerHTML = questions[currentQuestion].question;
         questionContainer.appendChild(h5Question);
 
@@ -157,31 +157,43 @@ function endQuiz() {
   
     inputName.setAttribute("placeholder", "");
     inputName.className = 'm-3 lg pt-2 pb-2';
-    saveBtn.className = 'btn';
+    saveBtn.className = 'btn btn-warning custom';
+    
     saveBtn.innerHTML = 'save';
+
     retakeBtn.className = 'btn btn-outline-dark mr-3 ml-3 mb-3';
     retakeBtn.id = "retakeButton";
     retakeBtn.innerHTML = 'Retake Quiz';
     displayResult.className = 'text-center ';
-    displayResult.innerHTML = `You got ${currentScore} out of ${questions.length} questions correct!`;
+    displayResult.className = 'HK Grotesk ';
+
+
+    
+    displayResult.innerHTML = `You've experienced ${currentScore} out of ${questions.length} of the stereotypical Asian American experience!`;
    
     if(currentScore == questions.length) {
 
         
         resultContainer.appendChild(inputName);
         resultContainer.appendChild(saveBtn);
+        resultContainer.appendChild(myButton);
         resultContainer.appendChild(displayResult);
+
         questionContainer.appendChild(displayText);
+
         // document.body.style.background = "url('images/giphyRight.gif')";
     } else {
 
         resultContainer.appendChild(inputName);
         resultContainer.appendChild(saveBtn);
-        resultContainer.appendChild(displayResult);  
+        resultContainer.appendChild(myButton); 
+        resultContainer.appendChild(displayResult); 
+
         resultContainer.appendChild(displayText);
+    
         // document.body.style.background = "url('images/giphyWrong.gif')"; 
     }
-    let tryBtn = document.getElementById('myButton').style.visibility = "visible";
+   document.getElementById('myButton').style.visibility = "visible";
    
     saveBtn.addEventListener("click", function(){
 
